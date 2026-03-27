@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriCore Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include necessary CSS file -->
+    <script src="script.js" defer></script> <!-- Include necessary JS file -->
+    <style>
+        /* Add inline CSS styles if any */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        /* Other styles... */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TriCore Dashboard</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#diagnostic">Diagnostic</a></li>
+            <li><a href="#change-readiness">Change Readiness</a></li>
+            <li><a href="#talent-matrix">Talent Matrix</a></li>
+            <li><a href="#assessments">Assessments</a></li>
+            <li><a href="#gap-analysis">Gap Analysis</a></li>
+            <li><a href="#interviews">Interviews</a></li>
+            <li><a href="#role-fit">Role Fit</a></li>
+            <li><a href="#self-assessment">Self-Assessment</a></li>
+            <li><a href="#supervisor-assessment">Supervisor Assessment</a></li>
+            <li><a href="#360-review">360 Review</a></li>
+            <li><a href="#interview-guide">Interview Guide</a></li>
+            <li><a href="#role-calibration">Role Calibration</a></li>
+            <li><a href="#position-profiles">Position Profiles</a></li>
+            <li><a href="#sequence-map">Sequence Map</a></li>
+            <li><a href="#culture-survey">Culture Survey</a></li>
+            <li><a href="#framework">Framework</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="overview">
+            <h2>Overview</h2>
+            <!-- Content for Overview -->
+        </section>
+        <section id="diagnostic">
+            <h2>Diagnostic</h2>
+            <!-- Content for Diagnostic -->
+        </section>
+        <section id="change-readiness">
+            <h2>Change Readiness</h2>
+            <!-- Content for Change Readiness -->
+        </section>
+        <section id="talent-matrix">
+            <h2>Talent Matrix</h2>
+            <!-- Content for Talent Matrix -->
+        </section>
+        <section id="assessments">
+            <h2>Assessments</h2>
+            <!-- Content for Assessments -->
+        </section>
+        <section id="gap-analysis">
+            <h2>Gap Analysis</h2>
+            <!-- Content for Gap Analysis -->
+        </section>
+        <section id="interviews">
+            <h2>Interviews</h2>
+            <!-- Content for Interviews -->
+        </section>
+        <section id="role-fit">
+            <h2>Role Fit</h2>
+            <!-- Content for Role Fit -->
+        </section>
+        <section id="self-assessment">
+            <h2>Self-Assessment</h2>
+            <!-- Content for Self-Assessment -->
+        </section>
+        <section id="supervisor-assessment">
+            <h2>Supervisor Assessment</h2>
+            <!-- Content for Supervisor Assessment -->
+        </section>
+        <section id="360-review">
+            <h2>360 Review</h2>
+            <!-- Content for 360 Review -->
+        </section>
+        <section id="interview-guide">
+            <h2>Interview Guide</h2>
+            <!-- Content for Interview Guide -->
+        </section>
+        <section id="role-calibration">
+            <h2>Role Calibration</h2>
+            <!-- Content for Role Calibration -->
+        </section>
+        <section id="position-profiles">
+            <h2>Position Profiles</h2>
+            <!-- Content for Position Profiles -->
+        </section>
+        <section id="sequence-map">
+            <h2>Sequence Map</h2>
+            <!-- Content for Sequence Map -->
+        </section>
+        <section id="culture-survey">
+            <h2>Culture Survey</h2>
+            <!-- Content for Culture Survey -->
+        </section>
+        <section id="framework">
+            <h2>Framework</h2>
+            <!-- Content for Framework -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TriCore Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript functions for API calls, form handling, and data loading
+          
+        // example function for switching tabs
+        const tabs = document.querySelectorAll('nav a');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function(event) {
+                event.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                document.querySelector('main > section.active').classList.remove('active');
+                target.classList.add('active');
+            });
+        });
+
+        // Example SUPABASE integration functions
+        async function fetchData() {
+            const { data, error } = await supabase
+                .from('your_table')
+                .select('*');
+            if (error) console.error('Error fetching data:', error);
+            return data;
+        }
+    </script>
+</body>
+</html>
